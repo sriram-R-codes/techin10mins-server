@@ -37,16 +37,7 @@ app.use(compression())
 // app.use(limiter)
 
 // CORS configuration
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:5173',
-    'https://heroic-strudel-3b2898.netlify.app/'
-  ],
-  credentials: true
-}))
+app.use(cors())
 
 // Body parser middleware
 app.use(express.json({ limit: '10mb' }))
